@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<div class="prop">
 <h1><b>Property Detail<b></h1>
 <p>
   <strong>Property:</strong>
@@ -24,6 +25,7 @@
   <strong>Remarks:</strong>
   <%= @property.remarks %>
 </p>
+</div>
 <h2><b>Nearest staion 1<b></h2>
 <p>
   <strong>Name of railway line:</strong>
@@ -54,6 +56,7 @@
   <strong>How many minutes walks:</strong>
   <%= @property.how_many_minutes_walks %>
 </p>
-
+<div class="links">
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>
+</div>
