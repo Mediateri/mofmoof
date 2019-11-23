@@ -9,9 +9,9 @@ one:
   name_of_railway_line: MyString
   statation_name: MyString
   how_many_minutes_walks: MyString
-  name_of_railway_line: MyString
-  statation_name: MyString
-  how_many_minutes_walks: MyString
+  name_of_railway_line1: MyString
+  statation_name1: MyString
+  how_many_minutes_walks1: MyString
 
 two:
   property: MyString
@@ -22,6 +22,6 @@ two:
   name_of_railway_line: MyString
   statation_name: MyString
   how_many_minutes_walks: MyString
-  name_of_railway_line: MyString
-  statation_name: MyString
-  how_many_minutes_walks: MyString
+  name_of_railway_line1: MyString
+  statation_name1: MyString
+  how_many_minutes_walks1: MyString
