@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  property: MyString
+  rent: MyString
+  adress: MyString
+  building_age: MyString
+  remarks: MyText
+  name_of_railway_line: MyString
+  statation_name: MyString
+  how_many_minutes_walks: MyString
+  name_of_railway_line1: MyString
+  statation_name1: MyString
+  how_many_minutes_walks1: MyString
+
+two:
+  property: MyString
+  rent: MyString
+  adress: MyString
+  building_age: MyString
+  remarks: MyText
+  name_of_railway_line: MyString
+  statation_name: MyString
+  how_many_minutes_walks: MyString
+  name_of_railway_line1: MyString
+  statation_name1: MyString
+  how_many_minutes_walks1: MyString
