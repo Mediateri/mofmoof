@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 20191125091941) do
     t.text     "remarks"
     t.string   "name_of_railway_line"
     t.string   "statation_name"
-    t.string   "how_many_minutes_walks"
+    t.integer  "how_many_minutes_walks"
     t.string   "name_of_railway_line1"
     t.string   "statation_name1"
-    t.string   "how_many_minutes_walks1"
+    t.integer  "how_many_minutes_walks1"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
