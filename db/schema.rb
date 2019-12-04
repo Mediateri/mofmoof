@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191125091941) do
+ActiveRecord::Schema.define(version: 20191204140618) do
+
+  create_table "back_ups", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string   "property"
@@ -18,14 +24,18 @@ ActiveRecord::Schema.define(version: 20191125091941) do
     t.string   "adress"
     t.string   "building_age"
     t.text     "remarks"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "stations", force: :cascade do |t|
     t.string   "name_of_railway_line"
     t.string   "statation_name"
-    t.integer  "how_many_minutes_walks"
-    t.string   "name_of_railway_line1"
-    t.string   "statation_name1"
-    t.integer  "how_many_minutes_walks1"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "how_many_minutes_walks"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "property_id"
+    t.index ["property_id"], name: "index_stations_on_property_id"
   end
 
 end

@@ -8,11 +8,13 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1
   def show
+    @station = Station.all
   end
 
   # GET /properties/new
   def new
     @property = Property.new
+    2.times { @property.stations.build }
   end
 
   # GET /properties/1/edit
@@ -22,7 +24,7 @@ class PropertiesController < ApplicationController
   # POST /properties
   def create
     @property = Property.new(property_params)
-
+   
     if @property.save
       redirect_to @property, notice: 'Property was successfully created.'
     else
@@ -53,6 +55,8 @@ class PropertiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def property_params
-      params.require(:property).permit(:property, :rent, :adress, :building_age, :remarks, :name_of_railway_line, :statation_name, :how_many_minutes_walks, :name_of_railway_line1, :statation_name1, :how_many_minutes_walks1)
+     params.require(:property).permit(:property, :rent, :adress, :building_age, :remarks, stations_attributes: [:id, :name_of_railway_line, :statation_name, :how_many_minutes_walks])
+      # params.require(:property).permit(:property, :rent, :adress, :building_age, :remarks, stations_attributes:  Station.attributes_names.map(&:to_sym).push(:_destroy))
+
     end
 end
