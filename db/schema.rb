@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191204140618) do
+ActiveRecord::Schema.define(version: 20191205083414) do
 
   create_table "back_ups", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "my_properties", force: :cascade do |t|
+    t.string   "property"
+    t.integer  "rent"
+    t.string   "adress"
+    t.string   "building_age"
+    t.string   "remarks"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "properties", force: :cascade do |t|
@@ -36,6 +46,16 @@ ActiveRecord::Schema.define(version: 20191204140618) do
     t.datetime "updated_at",             null: false
     t.integer  "property_id"
     t.index ["property_id"], name: "index_stations_on_property_id"
+  end
+
+  create_table "statons", force: :cascade do |t|
+    t.string   "name_of_railway_line"
+    t.string   "statation_name"
+    t.string   "how_many_minutes_walks"
+    t.integer  "my_property_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["my_property_id"], name: "index_statons_on_my_property_id"
   end
 
 end

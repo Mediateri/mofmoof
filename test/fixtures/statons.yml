@@ -4,8 +4,10 @@ one:
   name_of_railway_line: MyString
   statation_name: MyString
   how_many_minutes_walks: MyString
+  my_property: one
 
 two:
   name_of_railway_line: MyString
   statation_name: MyString
   how_many_minutes_walks: MyString
+  my_property: two

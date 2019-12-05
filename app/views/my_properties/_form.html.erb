@@ -1,16 +1,16 @@
-<%= form_for(@property) do |f| %>
-  <% if property.errors.any? %>
+<%= form_for(@my_property) do |f| %>
+  <% if my_property.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+      <h2><%= pluralize(my_property.errors.count, "error") %> prohibited this my_property from being saved:</h2>
 
       <ul>
-      <% property.errors.full_messages.each do |message| %>
+      <% my_property.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-<div class="prop">
+
   <div class="field">
     <%= f.label :property %>
     <%= f.text_field :property %>
@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :rent %>
-    <%= f.text_field :rent %>
+    <%= f.number_field :rent %>
   </div>
 
   <div class="field">
@@ -33,13 +33,9 @@
 
   <div class="field">
     <%= f.label :remarks %>
-    <%= f.text_area :remarks %>
+    <%= f.text_field :remarks %>
   </div>
-  </div >
- 
-   
- 
-  <%= f.fields_for :stations do |s| %>
+  <%= f.fields_for :statons do |s| %>
    
     <h2><b>Name of railway line </b></h2>
     <div class="field">
@@ -57,7 +53,6 @@
     <%= s.number_field :how_many_minutes_walks %>
   </div>
   <% end %>
-
   <div class="actions">
     <%= f.submit %>
   </div>

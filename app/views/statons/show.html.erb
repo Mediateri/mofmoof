@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name of railway line:</strong>
+  <%= @staton.name_of_railway_line %>
+</p>
+
+<p>
+  <strong>Statation name:</strong>
+  <%= @staton.statation_name %>
+</p>
+
+<p>
+  <strong>How many minutes walks:</strong>
+  <%= @staton.how_many_minutes_walks %>
+</p>
+
+<p>
+  <strong>My property:</strong>
+  <%= @staton.my_property %>
+</p>
+
+<%= link_to 'Edit', edit_staton_path(@staton) %> |
+<%= link_to 'Back', statons_path %>

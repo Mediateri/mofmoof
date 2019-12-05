@@ -1,36 +1,32 @@
 <p id="notice"><%= notice %></p>
-<div class="prop">
-<h1><b>Property Details</b></h1>
+
 <p>
   <strong>Property:</strong>
-  <%= @property.property %>
+  <%= @my_property.property %>
 </p>
 
 <p>
   <strong>Rent:</strong>
-  <%= @property.rent %>
+  <%= @my_property.rent %>
 </p>
 
 <p>
   <strong>Adress:</strong>
-  <%= @property.adress %>
+  <%= @my_property.adress %>
 </p>
 
 <p>
   <strong>Building age:</strong>
-  <%= @property.building_age %>
+  <%= @my_property.building_age %>
 </p>
 
 <p>
   <strong>Remarks:</strong>
-  <%= @property.remarks %>
+  <%= @my_property.remarks %>
 </p>
-</div>
-
- 
-<% @property.stations.each do |poor| %>
-  <% if @property.id == poor.property_id %>
-    <h2><b>Nearest station </b></h2>
+<% @my_property.statons.each do |poor| %>
+  <% if @my_property.id == poor.my_property_id %>
+    <h2><b>Nearest staton </b></h2>
     <p>
       <strong>Name of railway line:</strong>
       <%= poor.name_of_railway_line %>
@@ -47,7 +43,6 @@
     </p>
   <% end %>
 <% end %>
-<div class="links">
-  <%= link_to 'Edit', edit_property_path(@property) %> |
-  <%= link_to 'Back', properties_path %>
-</div>
+
+<%= link_to 'Edit', edit_my_property_path(@my_property) %> |
+<%= link_to 'Back', my_properties_path %>

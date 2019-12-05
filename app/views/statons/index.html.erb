@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Statons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name of railway line</th>
+      <th>Statation name</th>
+      <th>How many minutes walks</th>
+      <th>My property</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @statons.each do |staton| %>
+      <tr>
+        <td><%= staton.name_of_railway_line %></td>
+        <td><%= staton.statation_name %></td>
+        <td><%= staton.how_many_minutes_walks %></td>
+        <td><%= staton.my_property %></td>
+        <td><%= link_to 'Show', staton %></td>
+        <td><%= link_to 'Edit', edit_staton_path(staton) %></td>
+        <td><%= link_to 'Destroy', staton, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staton', new_staton_path %>
